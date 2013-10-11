@@ -5,7 +5,9 @@ import logging
 
 import config
 import toolkit
+import newrelic.agent
 
+newrelic.agent.initialize()
 
 VERSION = '0.6.2'
 app = flask.Flask('docker-registry')
